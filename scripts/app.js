@@ -1,21 +1,19 @@
-var app = angular.module('weatherApp', []);
+angular.module('weatherApp', [])
 
-app.factory('weatherApi', function($http){
+.factory('weatherApi', function($http){
   return {
     getData: function(city, state) {
       var cityString = encodeURIComponent(city);
       var stateString = encodeURIComponent(state);
-      var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" 
-                + cityString + "," + stateString 
-                + "&cnt=7&type=like&units=imperial";
-    
+      var url = "http://api.openweathermap.org/data/2.5/forecast/daily?cnt=7&type=like&units=imperial&q=" 
+                + cityString + "," + stateString;
     
       return $http.get(url);
     }
   }
-});
+})
 
-app.controller('weatherCtrl', function($http, $scope, weatherApi) {
+.controller('weatherCtrl', function($http, $scope, weatherApi) {
   
   $scope.loading = false;
   $scope.error = false;
@@ -39,8 +37,6 @@ app.controller('weatherCtrl', function($http, $scope, weatherApi) {
     
   }
 
-  
-
   $scope.getWeather = function(city, state) {
     
     $scope.loading = true;
@@ -60,7 +56,5 @@ app.controller('weatherCtrl', function($http, $scope, weatherApi) {
     });
 
   }
-
-
 
 });

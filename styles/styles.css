@@ -1,23 +1,23 @@
-/* line 17, styles.scss */
+/* line 18, styles.scss */
 .clearfix:after {
   display: table;
   content: "";
   clear: both;
 }
 
-/* line 22, styles.scss */
+/* line 23, styles.scss */
 body {
   text-align: center;
 }
 
-/* line 25, styles.scss */
+/* line 26, styles.scss */
 ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-/* line 30, styles.scss */
+/* line 31, styles.scss */
 body, input[type=text], input[type=submit] {
   font-family: 'Josefin Sans', verdana, sans-serif;
   font-size: 20px;
@@ -29,42 +29,65 @@ body, input[type=text], input[type=submit] {
   padding: 0;
 }
 
-/* line 38, styles.scss */
+/* line 39, styles.scss */
 input[type=submit], input[type=text] {
   padding: 1em;
   margin: 0.5em;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+/* line 43, styles.scss */
+input[type=submit]:focus, input[type=text]:focus {
+  outline: 0;
 }
 
-/* line 42, styles.scss */
+/* line 47, styles.scss */
 input[type=text] {
   border: 1px solid #62cab4;
 }
 
-/* line 45, styles.scss */
+/* line 50, styles.scss */
 input[type=submit] {
   background: #87d7c7;
+  position: relative;
+  top: -3px;
+  left: -3px;
+  -webkit-box-shadow: 1px 0px 0px #62cab4, 0px 1px 0px #40b89f, 2px 1px 0px #62cab4, 1px 2px 0px #40b89f, 3px 2px 0px #62cab4, 2px 3px 0px #40b89f, 4px 3px 0px #62cab4, 3px 4px 0px #40b89f;
+  -moz-box-shadow: 1px 0px 0px #62cab4, 0px 1px 0px #40b89f, 2px 1px 0px #62cab4, 1px 2px 0px #40b89f, 3px 2px 0px #62cab4, 2px 3px 0px #40b89f, 4px 3px 0px #62cab4, 3px 4px 0px #40b89f;
+  box-shadow: 1px 0px 0px #62cab4, 0px 1px 0px #40b89f, 2px 1px 0px #62cab4, 1px 2px 0px #40b89f, 3px 2px 0px #62cab4, 2px 3px 0px #40b89f, 4px 3px 0px #62cab4, 3px 4px 0px #40b89f;
+}
+/* line 64, styles.scss */
+input[type=submit]:hover, input[type=submit]:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  top: 0;
+  left: 0;
 }
 
-/* line 48, styles.scss */
+/* line 70, styles.scss */
 form {
   text-align: center;
 }
 
-/* line 52, styles.scss */
+/* line 74, styles.scss */
 .list-outer > li {
   padding: 1em;
   border-top: 1px solid #62cab4;
 }
 
 @media screen and (min-width: 895px) {
-  /* line 60, styles.scss */
+  /* line 82, styles.scss */
   .list-outer {
     width: 1687px;
     margin: 0 auto;
     border-left: 1px solid #62cab4;
     border-right: 1px solid #62cab4;
   }
-  /* line 65, styles.scss */
+  /* line 87, styles.scss */
   .list-outer > li {
     width: 200px;
     float: left;
@@ -72,12 +95,12 @@ form {
     border-bottom: 1px solid #62cab4;
     border-left: 1px solid #62cab4;
   }
-  /* line 71, styles.scss */
+  /* line 93, styles.scss */
   .list-outer > li:first-child {
     border-left: 0;
   }
 
-  /* line 77, styles.scss */
+  /* line 99, styles.scss */
   .forecast-wrapper {
     width: 100%;
     overflow-x: auto;

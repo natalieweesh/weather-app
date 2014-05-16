@@ -1,5 +1,8 @@
 @import "compass/css3";
 
+$lightTeal: #62cab4;
+$lighterTeal: #87d7c7;
+
 // Media Queries
 $break-XS: 320px;
 $break-S: 480px;
@@ -37,7 +40,10 @@ input[type=submit], input[type=text] {
   margin: 0.5em;
 }
 input[type=text] {
-  border: 1px solid lightgray;
+  border: 1px solid $lightTeal;
+}
+input[type=submit] {
+  background: $lighterTeal;
 }
 form {
   text-align: center;
@@ -45,7 +51,7 @@ form {
 .list-outer {
   &> li {
     padding: 1em;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid $lightTeal;
   }
 }
 
@@ -54,14 +60,14 @@ form {
   .list-outer {
     width: ((200 + 40 + 1) * 7) + px;
     margin: 0 auto;
-    border-left: 1px solid lightgray;
-    border-right: 1px solid lightgray;
+    border-left: 1px solid $lightTeal;
+    border-right: 1px solid $lightTeal;
     &> li {
       width: 200px;
       float: left;
       display: block;
-      border-bottom: 1px solid lightgray;
-      border-left: 1px solid lightgray;
+      border-bottom: 1px solid $lightTeal;
+      border-left: 1px solid $lightTeal;
       &:first-child {
         border-left: 0;
       }

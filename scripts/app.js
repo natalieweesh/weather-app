@@ -1,6 +1,15 @@
 var app = angular.module('weatherApp', []);
 
-app.controller('weatherCtrl', function($http, $scope) {
+app.factory('weatherApi', function($http){
+  return {
+    getWeather: function(url) {
+      console.log('in the factory function');
+      return $http.get(url);
+    }
+  }
+});
+
+app.controller('weatherCtrl', function($http, $scope, weatherApi) {
   
   $scope.loading = false;
   $scope.error = false;
@@ -28,9 +37,28 @@ app.controller('weatherCtrl', function($http, $scope) {
   $scope.getData = function(city, state) {
     var cityString = encodeURIComponent(city);
     var stateString = encodeURIComponent(state);
-    var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + cityString + "," + stateString + "&cnt=7&type=like&units=imperial"; // cod: "404", message: ""
+    var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" 
+              + cityString 
+              + "," 
+              + stateString 
+              + "&cnt=7&type=like&units=imperial";
     $scope.loading = true;
     $scope.error = false;
+    
+
+    weatherApi.getWeather(url).success(function(data) {
+      $scope.loading = false;
+        $scope.result = data;
+        $scope.statusCode = data.cod;
+        console.log(data);
+        if ($scope.statusCode !== "200") {
+          $scope.error = true;
+        } else {
+          $scope.getDays(data);
+        }
+    });
+/*
+
     $http.get(url)
       .success(function(data) {
         $scope.loading = false;
@@ -43,6 +71,7 @@ app.controller('weatherCtrl', function($http, $scope) {
           $scope.getDays(data);
         }
       });
+*/
   }
 
 

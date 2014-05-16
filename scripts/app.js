@@ -2,8 +2,14 @@ var app = angular.module('weatherApp', []);
 
 app.factory('weatherApi', function($http){
   return {
-    getWeather: function(url) {
-      console.log('in the factory function');
+    getData: function(city, state) {
+      var cityString = encodeURIComponent(city);
+      var stateString = encodeURIComponent(state);
+      var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" 
+                + cityString + "," + stateString 
+                + "&cnt=7&type=like&units=imperial";
+    
+    
       return $http.get(url);
     }
   }
@@ -16,7 +22,6 @@ app.controller('weatherCtrl', function($http, $scope, weatherApi) {
 
   $scope.getDays = function(data) {
     $scope.today = new Date();
-    
     var nextDay = $scope.today;
     $scope.days = [];
     $scope.cityName = data.city.name;
@@ -34,44 +39,26 @@ app.controller('weatherCtrl', function($http, $scope, weatherApi) {
     
   }
 
-  $scope.getData = function(city, state) {
-    var cityString = encodeURIComponent(city);
-    var stateString = encodeURIComponent(state);
-    var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" 
-              + cityString 
-              + "," 
-              + stateString 
-              + "&cnt=7&type=like&units=imperial";
+  
+
+  $scope.getWeather = function(city, state) {
+    
     $scope.loading = true;
     $scope.error = false;
-    
 
-    weatherApi.getWeather(url).success(function(data) {
+    weatherApi.getData(city, state).success(function(response) {
       $scope.loading = false;
-        $scope.result = data;
-        $scope.statusCode = data.cod;
-        console.log(data);
-        if ($scope.statusCode !== "200") {
-          $scope.error = true;
-        } else {
-          $scope.getDays(data);
-        }
-    });
-/*
+      $scope.result = response;
+      $scope.statusCode = response.cod;
+      console.log(response);
+      if ($scope.statusCode !== "200") {
+        $scope.error = true;
+      } else {
+        $scope.getDays(response);
+      }
 
-    $http.get(url)
-      .success(function(data) {
-        $scope.loading = false;
-        $scope.result = data;
-        $scope.statusCode = data.cod;
-        console.log(data);
-        if ($scope.statusCode !== "200") {
-          $scope.error = true;
-        } else {
-          $scope.getDays(data);
-        }
-      });
-*/
+    });
+
   }
 
 

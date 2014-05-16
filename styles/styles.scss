@@ -1,0 +1,73 @@
+@import "compass/css3";
+
+// Media Queries
+$break-XS: 320px;
+$break-S: 480px;
+$break-M: 768px;
+$break-L: 895px;
+$break-XL: 1024px;
+
+@mixin breakpoint($screenWidth: 400px) {
+  @media screen and (min-width: $screenWidth) { @content; }
+}
+
+.clearfix:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+body {
+  text-align: center;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+body, input[type=text], input[type=submit] {
+  font-family: 'Josefin Sans', verdana, sans-serif;
+  font-size: 20px;
+  @include appearance(none);
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+input[type=submit], input[type=text] {
+  padding: 1em;
+  margin: 0.5em;
+}
+input[type=text] {
+  border: 1px solid lightgray;
+}
+form {
+  text-align: center;
+}
+.list-outer {
+  &> li {
+    padding: 1em;
+    border-top: 1px solid lightgray;
+  }
+}
+
+
+@include breakpoint($break-L) {
+  .list-outer {
+    width: ((200 + 40 + 2) * 7) + px;
+    &> li {
+      width: 200px;
+      float: left;
+      display: block;
+      border-bottom: 1px solid lightgray;
+      border-left: 1px solid lightgray;
+      &:first-child {
+        border-left: 0;
+      }
+    }
+    
+  }
+  .forecast-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+

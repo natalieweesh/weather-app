@@ -1,0 +1,77 @@
+/* line 14, styles.scss */
+.clearfix:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+/* line 19, styles.scss */
+body {
+  text-align: center;
+}
+
+/* line 22, styles.scss */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 27, styles.scss */
+body, input[type=text], input[type=submit] {
+  font-family: 'Josefin Sans', verdana, sans-serif;
+  font-size: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 35, styles.scss */
+input[type=submit], input[type=text] {
+  padding: 1em;
+  margin: 0.5em;
+}
+
+/* line 39, styles.scss */
+input[type=text] {
+  border: 1px solid lightgray;
+}
+
+/* line 42, styles.scss */
+form {
+  text-align: center;
+}
+
+/* line 46, styles.scss */
+.list-outer > li {
+  padding: 1em;
+  border-top: 1px solid lightgray;
+}
+
+@media screen and (min-width: 895px) {
+  /* line 54, styles.scss */
+  .list-outer {
+    width: 1694px;
+  }
+  /* line 56, styles.scss */
+  .list-outer > li {
+    width: 200px;
+    float: left;
+    display: block;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+  }
+  /* line 62, styles.scss */
+  .list-outer > li:first-child {
+    border-left: 0;
+  }
+
+  /* line 68, styles.scss */
+  .forecast-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+}

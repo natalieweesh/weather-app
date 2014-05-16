@@ -53,6 +53,9 @@ form {
 @include breakpoint($break-L) {
   .list-outer {
     width: ((200 + 40 + 2) * 7) + px;
+    margin: 0 auto;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
     &> li {
       width: 200px;
       float: left;

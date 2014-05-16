@@ -55,8 +55,11 @@ form {
   /* line 54, styles.scss */
   .list-outer {
     width: 1694px;
+    margin: 0 auto;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
   }
-  /* line 56, styles.scss */
+  /* line 59, styles.scss */
   .list-outer > li {
     width: 200px;
     float: left;
@@ -64,12 +67,12 @@ form {
     border-bottom: 1px solid lightgray;
     border-left: 1px solid lightgray;
   }
-  /* line 62, styles.scss */
+  /* line 65, styles.scss */
   .list-outer > li:first-child {
     border-left: 0;
   }
 
-  /* line 68, styles.scss */
+  /* line 71, styles.scss */
   .forecast-wrapper {
     width: 100%;
     overflow-x: auto;

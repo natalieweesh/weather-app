@@ -5,16 +5,10 @@ app.controller('weatherCtrl', function($http, $scope) {
   $scope.loading = false;
   $scope.error = false;
 
-  var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=newjersey&cnt=7&type=like"; // cod: "200", message: "3.2075"
-  var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=new%20jersey&cnt=7&type=like"; // cod: "404", message: ""  
-
-
-
   $scope.getDays = function(data) {
     $scope.today = new Date();
     
     var nextDay = $scope.today;
-    console.log('today: ' + nextDay);
     $scope.days = [];
     $scope.cityName = data.city.name;
     $scope.daysData = data.list;
@@ -43,9 +37,7 @@ app.controller('weatherCtrl', function($http, $scope) {
         $scope.result = data;
         $scope.statusCode = data.cod;
         console.log(data);
-        console.log('code: ' + $scope.statusCode);
         if ($scope.statusCode !== "200") {
-          console.log('there was an error!')
           $scope.error = true;
         } else {
           $scope.getDays(data);

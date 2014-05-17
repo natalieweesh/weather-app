@@ -17,9 +17,10 @@ angular.module('weatherApp', [])
   
   $scope.loading = false;
   $scope.error = false;
+  $scope.selectedDay = {};
   
-  $scope.selectDay(day) = function(){
-    $scope.selectedDay = day;
+  $scope.selectDay(idx) = function(){
+    $scope.selectedDay = days[idx];
   }
   
   $scope.getDays = function(data) {
@@ -31,7 +32,8 @@ angular.module('weatherApp', [])
     for (var i=0; i < 7; i++) {
       var dayData = $scope.daysData[i];
       
-      $scope.days.push({'theDate': nextDay,
+      $scope.days.push({'idx': i,
+                        'theDate': nextDay,
                         'hi': dayData.temp.max,
                         'lo': dayData.temp.min,
                         'blurb': dayData.weather[0].description,

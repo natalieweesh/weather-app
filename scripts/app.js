@@ -17,24 +17,34 @@ angular.module('weatherApp', [])
   
   $scope.loading = false;
   $scope.error = false;
-
+  $scope.days = [];
+  $scope.selectedDay = {};
+  
+  $scope.selectDay = function(idx){
+    $scope.selectedDay = $scope.days[idx];
+  }
+  
   $scope.getDays = function(data) {
     $scope.today = new Date();
     var nextDay = $scope.today;
-    $scope.days = [];
     $scope.cityName = data.city.name;
     $scope.daysData = data.list;
     for (var i=0; i < 7; i++) {
       var dayData = $scope.daysData[i];
       
-      $scope.days.push({'theDate': nextDay,
+      $scope.days.push({'idx': i,
+                        'theDate': nextDay,
                         'hi': dayData.temp.max,
                         'lo': dayData.temp.min,
-                        'blurb': dayData.weather[0].description
+                        'blurb': dayData.weather[0].description,
+                        'clouds': dayData.clouds,
+                        'humidity': dayData.humidity,
+                        'pressure': dayData.pressure,
+                        'speed': dayData.speed
                       });
       nextDay = new Date(nextDay.setDate($scope.today.getDate() + i * 1));
     }
-    
+    $scope.selectedDay = $scope.days[0]; 
   }
 
   $scope.getWeather = function(city, state) {

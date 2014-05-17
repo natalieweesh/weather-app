@@ -145,7 +145,7 @@ form {
   }
   /* line 131, styles.scss */
   .forecast-wrapper::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
   }
   /* line 134, styles.scss */
   .forecast-wrapper::-moz-scrollbar {

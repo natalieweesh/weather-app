@@ -34,22 +34,38 @@
       <div class="forecast-wrapper">
 
         <ul class="list-outer clearfix">
-          <li ng-repeat="day in days">
+          <li ng-repeat="day in days" ng-click="selectDay(day.idx)">
             <ul>
-              <li>
+              <li class="date">
                 {{day.theDate | date:'EEEE, MMM d'}}
               </li>
               <li>
-                Hi: {{day.hi}}&deg; F
+                Hi: <span class="big">{{day.hi}}&deg;</span> F
               </li>
               <li>
-                Lo: {{day.lo}}&deg; F
+                Lo: <span class="big">{{day.lo}}&deg;</span> F
               </li>
               <li>{{day.blurb}}</li>
             </ul>
           </li>
         </ul>
       </div> <!-- end div .forecast-wrapper -->
+      <div ng-if="selectedDay" class="extra-details" ng-model="selectedDay">
+        <ul>
+          <li>
+            Cloud cover: {{selectedDay.clouds}}
+          </li>
+          <li>
+            Humidity: {{selectedDay.humidity}}
+          </li>
+          <li>
+            Pressure: {{selectedDay.pressure}}
+          </li>
+          <li>
+            Speed: {{selectedDay.speed}}
+          </li>
+        </ul>
+      </div>
     </div>
     
 

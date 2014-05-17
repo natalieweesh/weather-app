@@ -91,9 +91,28 @@ form {
   &> li {
     padding: 1em;
     border-top: 1px solid $lightTeal;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
-
+.date {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.big {
+  font-size: 30px;
+}
+.list-inner > li {
+  line-height: 2em;
+}
+.extra-details {
+  display: none;
+  padding: 1em;
+  ul > li {
+    line-height: 2em;
+  }
+}
 
 
 
@@ -115,14 +134,17 @@ form {
     }
     
   }
+  .extra-details {
+    display: block;
+  }
   .forecast-wrapper {
     width: 100%;
     overflow-x: auto;
     &::-webkit-scrollbar {
-        width: 10px;
+        width: 5px;
     }
     &::-moz-scrollbar {
-        width: 10px;
+        width: 5px;
     }
      
     &::-webkit-scrollbar-track {
@@ -135,11 +157,11 @@ form {
     }
      
     &::-webkit-scrollbar-thumb {
-        border-radius: 10px;
+        border-radius: 5px;
         background: $lightTeal;
     }
     &::-moz-scrollbar-thumb {
-        border-radius: 10px;
+        border-radius: 5px;
         background: $lightTeal;
     }
   }
@@ -167,7 +189,7 @@ form {
     }
      
     scrollbar[orient="vertical"] {
-      min-width: 10px !important;
+      min-width: 5px !important;
     }
   }
 

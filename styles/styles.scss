@@ -119,10 +119,10 @@ form {
     width: 100%;
     overflow-x: auto;
     &::-webkit-scrollbar {
-        width: 12px;
+        width: 10px;
     }
     &::-moz-scrollbar {
-        width: 12px;
+        width: 10px;
     }
      
     &::-webkit-scrollbar-track {
@@ -136,12 +136,42 @@ form {
      
     &::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        background: $teal;
+        background: $lightTeal;
     }
     &::-moz-scrollbar-thumb {
         border-radius: 10px;
-        background: $teal;
+        background: $lightTeal;
     }
   }
+
+
+
+
+  @-moz-document url-prefix(http://),url-prefix(https://) {
+    scrollbar {
+       -moz-appearance: none !important;
+       background: $lightGray !important;
+    }
+    thumb,scrollbarbutton {
+       -moz-appearance: none !important;
+       background-color: $lightTeal !important;
+    }
+     
+    thumb:hover,scrollbarbutton:hover {
+       -moz-appearance: none !important;
+       background-color: $teal !important;
+    }
+     
+    scrollbarbutton {
+       display: none !important;
+    }
+     
+    scrollbar[orient="vertical"] {
+      min-width: 10px !important;
+    }
+  }
+
+
+
 }
 

@@ -30,7 +30,11 @@ angular.module('weatherApp', [])
       $scope.days.push({'theDate': nextDay,
                         'hi': dayData.temp.max,
                         'lo': dayData.temp.min,
-                        'blurb': dayData.weather[0].description
+                        'blurb': dayData.weather[0].description,
+                        'clouds': dayData.clouds,
+                        'humidity': dayData.humidity,
+                        'pressure': dayData.pressure,
+                        'speed': dayData.speed
                       });
       nextDay = new Date(nextDay.setDate($scope.today.getDate() + i * 1));
     }

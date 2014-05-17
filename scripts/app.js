@@ -17,7 +17,11 @@ angular.module('weatherApp', [])
   
   $scope.loading = false;
   $scope.error = false;
-
+  
+  $scope.selectDay(day) = function(){
+    $scope.selectedDay = day;
+  }
+  
   $scope.getDays = function(data) {
     $scope.today = new Date();
     var nextDay = $scope.today;
@@ -38,7 +42,7 @@ angular.module('weatherApp', [])
                       });
       nextDay = new Date(nextDay.setDate($scope.today.getDate() + i * 1));
     }
-    
+    $scope.selectedDay = days[0]; 
   }
 
   $scope.getWeather = function(city, state) {

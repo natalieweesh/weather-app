@@ -12,11 +12,21 @@
   <body ng-controller="weatherCtrl">
     <form>
       <input placeholder="City" type="text" ng-model="city">
-      <input placeholder="State" type="text" ng-model="state">
+      <input placeholder="State" type="text" ng-model="state" class="state" maxlength="2">
       <input type="submit" value="Get 7-day Forecast" ng-click="getWeather(city, state)">
     </form>
     
-    <p ng-if="loading">Loading</p>
+    
+    <div ng-if="loading" class="cloud-loader">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    <p ng-if="loading">Loading...</p>
+
     <h2 ng-if="error && !loading">An error has occured!</h2>
     <div ng-if="!error && !loading">
       <h2 ng-model="cityName">{{cityName}}</h2>

@@ -34,7 +34,7 @@
       <div class="forecast-wrapper">
 
         <ul class="list-outer clearfix">
-          <li ng-repeat="day in days">
+          <li ng-repeat="day in days" ng-click="selectDay(day)">
             <ul>
               <li class="date">
                 {{day.theDate | date:'EEEE, MMM d'}}
@@ -50,6 +50,23 @@
           </li>
         </ul>
       </div> <!-- end div .forecast-wrapper -->
+      <div ng-model="selectedDay">
+        <ul>
+          <li>
+            {{selectedDay.clouds}}
+          </li>
+          <li>
+            {{selectedDay.humidity}}
+          </li>
+          <li>
+            {{selectedDay.pressure}}
+          </li>
+          <li>
+            {{selectedDay.speed}}
+          </li>
+        </ul>
+        
+      </div>
     </div>
     
 

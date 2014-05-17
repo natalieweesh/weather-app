@@ -1,23 +1,23 @@
-/* line 18, styles.scss */
+/* line 19, styles.scss */
 .clearfix:after {
   display: table;
   content: "";
   clear: both;
 }
 
-/* line 23, styles.scss */
+/* line 24, styles.scss */
 body {
   text-align: center;
 }
 
-/* line 26, styles.scss */
+/* line 27, styles.scss */
 ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-/* line 31, styles.scss */
+/* line 32, styles.scss */
 body, input[type=text], input[type=submit] {
   font-family: 'Josefin Sans', verdana, sans-serif;
   font-size: 20px;
@@ -29,7 +29,7 @@ body, input[type=text], input[type=submit] {
   padding: 0;
 }
 
-/* line 39, styles.scss */
+/* line 40, styles.scss */
 input[type=submit], input[type=text] {
   padding: 1em;
   margin: 0.5em;
@@ -39,39 +39,39 @@ input[type=submit], input[type=text] {
   -o-border-radius: 0;
   border-radius: 0;
 }
-/* line 43, styles.scss */
+/* line 44, styles.scss */
 input[type=submit]:focus, input[type=text]:focus {
   outline: 0;
 }
 
-/* line 47, styles.scss */
+/* line 48, styles.scss */
 input[type=text] {
   border: 1px solid #62cab4;
 }
 
-/* line 50, styles.scss */
+/* line 51, styles.scss */
 input[type=text].state {
   width: 60px;
   text-transform: uppercase;
 }
-/* line 53, styles.scss */
+/* line 54, styles.scss */
 input[type=text].state::-webkit-input-placeholder {
   text-transform: none;
 }
-/* line 56, styles.scss */
+/* line 57, styles.scss */
 input[type=text].state:-moz-placeholder {
   text-transform: none;
 }
-/* line 59, styles.scss */
+/* line 60, styles.scss */
 input[type=text].state::-moz-placeholder {
   text-transform: none;
 }
-/* line 62, styles.scss */
+/* line 63, styles.scss */
 input[type=text].state:-ms-input-placeholder {
   text-transform: none;
 }
 
-/* line 66, styles.scss */
+/* line 67, styles.scss */
 input[type=submit] {
   background: #87d7c7;
   position: relative;
@@ -81,7 +81,7 @@ input[type=submit] {
   -moz-box-shadow: 1px 0px 0px #62cab4, 0px 1px 0px #40b89f, 2px 1px 0px #62cab4, 1px 2px 0px #40b89f, 3px 2px 0px #62cab4, 2px 3px 0px #40b89f, 4px 3px 0px #62cab4, 3px 4px 0px #40b89f;
   box-shadow: 1px 0px 0px #62cab4, 0px 1px 0px #40b89f, 2px 1px 0px #62cab4, 1px 2px 0px #40b89f, 3px 2px 0px #62cab4, 2px 3px 0px #40b89f, 4px 3px 0px #62cab4, 3px 4px 0px #40b89f;
 }
-/* line 80, styles.scss */
+/* line 81, styles.scss */
 input[type=submit]:hover {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -90,155 +90,26 @@ input[type=submit]:hover {
   left: 0;
 }
 
-/* line 86, styles.scss */
+/* line 87, styles.scss */
 form {
   text-align: center;
 }
 
-/* line 90, styles.scss */
+/* line 91, styles.scss */
 .list-outer > li {
   padding: 1em;
   border-top: 1px solid #62cab4;
 }
 
-/* begin cloud loader */
-@-webkit-keyframes convect {
-  /* line 99, styles.scss */
-  0% {
-    top: 25px;
-    left: 25px;
-  }
-
-  /* line 100, styles.scss */
-  25% {
-    top: 5px;
-    left: 65px;
-  }
-
-  /* line 101, styles.scss */
-  50% {
-    top: 27px;
-    left: 110px;
-  }
-
-  /* line 102, styles.scss */
-  75% {
-    top: 40px;
-    left: 65px;
-  }
-
-  /* line 103, styles.scss */
-  100% {
-    top: 25px;
-    left: 25px;
-  }
-}
-
-@keyframes convect {
-  /* line 106, styles.scss */
-  0% {
-    top: 25px;
-    left: 25px;
-  }
-
-  /* line 107, styles.scss */
-  25% {
-    top: 5px;
-    left: 65px;
-  }
-
-  /* line 108, styles.scss */
-  50% {
-    top: 27px;
-    left: 110px;
-  }
-
-  /* line 109, styles.scss */
-  75% {
-    top: 40px;
-    left: 65px;
-  }
-
-  /* line 110, styles.scss */
-  100% {
-    top: 25px;
-    left: 25px;
-  }
-}
-
-/* line 113, styles.scss */
-.cloud-loader {
-  position: relative;
-  width: 200px;
-  height: 110px;
-  margin: 20px auto 0;
-}
-
-/* line 119, styles.scss */
-.particle {
-  position: absolute;
-  top: 10px;
-  left: 0px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border: 7px solid #222;
-  -webkit-animation: convect 4s infinite linear;
-  animation: convect 4s infinite linear;
-}
-
-/* line 128, styles.scss */
-.particle:before {
-  display: block;
-  content: '';
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background: #fff;
-  z-index: 1;
-}
-
-/* line 138, styles.scss */
-.particle:nth-child(2) {
-  -webkit-animation-delay: -3.33s;
-  animation-delay: -3.33s;
-}
-
-/* line 142, styles.scss */
-.particle:nth-child(3) {
-  -webkit-animation-delay: -2.67s;
-  animation-delay: -2.67s;
-}
-
-/* line 146, styles.scss */
-.particle:nth-child(4) {
-  -webkit-animation-delay: -2s;
-  animation-delay: -2s;
-}
-
-/* line 150, styles.scss */
-.particle:nth-child(5) {
-  -webkit-animation-delay: -1.33s;
-  animation-delay: -1.33s;
-}
-
-/* line 154, styles.scss */
-.particle:nth-child(6) {
-  -webkit-animation-delay: -0.67s;
-  animation-delay: -0.67s;
-}
-
-/* end cloud loader */
 @media screen and (min-width: 895px) {
-  /* line 166, styles.scss */
+  /* line 101, styles.scss */
   .list-outer {
     width: 1687px;
     margin: 0 auto;
     border-left: 1px solid #62cab4;
     border-right: 1px solid #62cab4;
   }
-  /* line 171, styles.scss */
+  /* line 106, styles.scss */
   .list-outer > li {
     width: 200px;
     float: left;
@@ -246,14 +117,42 @@ form {
     border-bottom: 1px solid #62cab4;
     border-left: 1px solid #62cab4;
   }
-  /* line 177, styles.scss */
+  /* line 112, styles.scss */
   .list-outer > li:first-child {
     border-left: 0;
   }
 
-  /* line 183, styles.scss */
+  /* line 118, styles.scss */
   .forecast-wrapper {
     width: 100%;
     overflow-x: auto;
+  }
+  /* line 121, styles.scss */
+  .forecast-wrapper::-webkit-scrollbar {
+    width: 12px;
+  }
+  /* line 124, styles.scss */
+  .forecast-wrapper::-moz-scrollbar {
+    width: 12px;
+  }
+  /* line 128, styles.scss */
+  .forecast-wrapper::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background: silver;
+  }
+  /* line 132, styles.scss */
+  .forecast-wrapper::-moz-scrollbar-track {
+    border-radius: 0px;
+    background: silver;
+  }
+  /* line 137, styles.scss */
+  .forecast-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #40b89f;
+  }
+  /* line 141, styles.scss */
+  .forecast-wrapper::-moz-scrollbar-thumb {
+    border-radius: 10px;
+    background: #40b89f;
   }
 }

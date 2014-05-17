@@ -50,22 +50,21 @@
           </li>
         </ul>
       </div> <!-- end div .forecast-wrapper -->
-      <div ng-model="selectedDay">
+      <div ng-if="selectedDay" class="extra-details" ng-model="selectedDay">
         <ul>
           <li>
-            {{selectedDay.clouds}}
+            Cloud cover: {{selectedDay.clouds}}
           </li>
           <li>
-            {{selectedDay.humidity}}
+            Humidity: {{selectedDay.humidity}}
           </li>
           <li>
-            {{selectedDay.pressure}}
+            Pressure: {{selectedDay.pressure}}
           </li>
           <li>
-            {{selectedDay.speed}}
+            Speed: {{selectedDay.speed}}
           </li>
         </ul>
-        
       </div>
     </div>
     

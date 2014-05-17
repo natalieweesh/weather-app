@@ -18,13 +18,14 @@ angular.module('weatherApp', [])
   $scope.loading = false;
   $scope.error = false;
   $scope.days = [];
-  $scope.selectedDay = {};
+
   
   $scope.selectDay = function(idx){
     $scope.selectedDay = $scope.days[idx];
   }
   
   $scope.getDays = function(data) {
+    $scope.days = [];
     $scope.today = new Date();
     var nextDay = $scope.today;
     $scope.cityName = data.city.name;

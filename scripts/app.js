@@ -19,7 +19,7 @@ angular.module('weatherApp', [])
   $scope.error = false;
   $scope.selectedDay = {};
   
-  $scope.selectDay(idx) = function(){
+  $scope.selectDay = function(idx){
     $scope.selectedDay = days[idx];
   }
   

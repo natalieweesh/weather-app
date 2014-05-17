@@ -133,7 +133,7 @@ form {
   }
   /* line 124, styles.scss */
   .forecast-wrapper::-moz-scrollbar {
-    width: 10px;
+    width: 7px;
   }
   /* line 128, styles.scss */
   .forecast-wrapper::-webkit-scrollbar-track {
@@ -147,12 +147,12 @@ form {
   }
   /* line 137, styles.scss */
   .forecast-wrapper::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+    border-radius: 7px;
     background: #62cab4;
   }
   /* line 141, styles.scss */
   .forecast-wrapper::-moz-scrollbar-thumb {
-    border-radius: 10px;
+    border-radius: 7px;
     background: #62cab4;
   }
 

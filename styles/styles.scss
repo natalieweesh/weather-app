@@ -122,7 +122,7 @@ form {
         width: 10px;
     }
     &::-moz-scrollbar {
-        width: 10px;
+        width: 7px;
     }
      
     &::-webkit-scrollbar-track {
@@ -135,11 +135,11 @@ form {
     }
      
     &::-webkit-scrollbar-thumb {
-        border-radius: 10px;
+        border-radius: 7px;
         background: $lightTeal;
     }
     &::-moz-scrollbar-thumb {
-        border-radius: 10px;
+        border-radius: 7px;
         background: $lightTeal;
     }
   }

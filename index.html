@@ -35,15 +35,15 @@
 
         <ul class="list-outer clearfix">
           <li ng-repeat="day in days">
-            <ul>
+            <ul class="list-inner">
               <li class="date">
                 {{day.theDate | date:'EEEE, MMM d'}}
               </li>
               <li>
-                Hi: {{day.hi}}&deg; F
+                Hi: <span class="big">{{day.hi}}&deg;</span> F
               </li>
               <li>
-                Lo: {{day.lo}}&deg; F
+                Lo: <span class="big">{{day.lo}}&deg;</span> F
               </li>
               <li>{{day.blurb}}</li>
             </ul>

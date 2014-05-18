@@ -99,30 +99,37 @@ form {
 .list-outer > li {
   padding: 1em;
   border-top: 1px solid #62cab4;
+  height: 150px;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-/* line 94, styles.scss */
-.list-outer > li:hover {
-  cursor: pointer;
+/* line 103, styles.scss */
+.list-outer > li:hover .details {
+  margin-top: -128px;
 }
-/* line 97, styles.scss */
+/* line 107, styles.scss */
 .list-outer > li.Clear {
   background: url(../images/sun_background.png);
 }
-/* line 100, styles.scss */
+/* line 110, styles.scss */
 .list-outer > li.Clouds {
   background: url(../images/clouds_background.png);
 }
-/* line 103, styles.scss */
+/* line 113, styles.scss */
 .list-outer > li.Rain {
   background: url(../images/rain_background.png);
 }
 
-/* line 109, styles.scss */
+/* line 119, styles.scss */
 .date {
   font-size: 16px;
   text-transform: uppercase;
   line-height: 3em;
-  margin-bottom: 1em;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
@@ -130,122 +137,147 @@ form {
   border-radius: 25px;
 }
 
-/* line 116, styles.scss */
+/* line 125, styles.scss */
 .blurb {
   margin: 1em auto;
 }
 
-/* line 119, styles.scss */
+/* line 128, styles.scss */
 .big {
   font-size: 30px;
 }
 
-/* line 122, styles.scss */
+/* line 131, styles.scss */
 .list-inner > li {
   line-height: 2em;
 }
 
-/* line 125, styles.scss */
+/* line 134, styles.scss */
 .extra-details {
   display: none;
   padding: 1em;
 }
-/* line 128, styles.scss */
+/* line 137, styles.scss */
 .extra-details ul > li {
   line-height: 2em;
 }
 
+/* line 141, styles.scss */
+.details {
+  padding: 1em 1em 2em;
+  width: 200px;
+  margin: 0 auto;
+  -webkit-border-radius: 25px 25px 0 0;
+  -moz-border-radius: 25px 25px 0 0;
+  -ms-border-radius: 25px 25px 0 0;
+  -o-border-radius: 25px 25px 0 0;
+  border-radius: 25px 25px 0 0;
+  position: relative;
+  z-index: 1;
+  background: #87d7c7;
+  -webkit-transition: margin 0.4s;
+  -moz-transition: margin 0.4s;
+  -o-transition: margin 0.4s;
+  transition: margin 0.4s;
+}
+
 @media screen and (min-width: 895px) {
-  /* line 136, styles.scss */
+  /* line 154, styles.scss */
   .list-outer {
     width: 1687px;
     margin: 0 auto;
+    height: 199px;
+    overflow: hidden;
     border-left: 1px solid #62cab4;
     border-right: 1px solid #62cab4;
   }
-  /* line 141, styles.scss */
+  /* line 161, styles.scss */
   .list-outer > li {
     width: 200px;
+    height: auto;
     float: left;
     display: block;
     border-bottom: 1px solid #62cab4;
     border-left: 1px solid #62cab4;
   }
-  /* line 147, styles.scss */
+  /* line 169, styles.scss */
   .list-outer > li:first-child {
     border-left: 0;
   }
-  /* line 151, styles.scss */
-  .list-outer > li.selected .date {
-    background: #62cab4;
-  }
 
-  /* line 158, styles.scss */
+  /* line 176, styles.scss */
   .extra-details {
     display: block;
   }
 
-  /* line 161, styles.scss */
+  /* line 179, styles.scss */
+  .details {
+    width: auto;
+  }
+
+  /* line 182, styles.scss */
   .forecast-wrapper {
     width: 100%;
     overflow-x: auto;
+    overflow-y: hidden;
+    height: 199px;
   }
-  /* line 164, styles.scss */
+  /* line 187, styles.scss */
   .forecast-wrapper::-webkit-scrollbar {
     width: 2.5px;
     height: 8px;
   }
-  /* line 168, styles.scss */
+  /* line 191, styles.scss */
   .forecast-wrapper::-moz-scrollbar {
     width: 2.5px;
     height: 8px;
   }
-  /* line 173, styles.scss */
+  /* line 196, styles.scss */
   .forecast-wrapper::-webkit-scrollbar-track {
     border-radius: 0px;
     background: silver;
   }
-  /* line 177, styles.scss */
+  /* line 200, styles.scss */
   .forecast-wrapper::-moz-scrollbar-track {
     border-radius: 0px;
     background: silver;
   }
-  /* line 182, styles.scss */
+  /* line 205, styles.scss */
   .forecast-wrapper::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: #62cab4;
   }
-  /* line 186, styles.scss */
+  /* line 209, styles.scss */
   .forecast-wrapper::-moz-scrollbar-thumb {
     border-radius: 10px;
     background: #62cab4;
   }
 
   @-moz-document url-prefix(http://),url-prefix(https://) {
-    /* line 196, styles.scss */
+    /* line 219, styles.scss */
     scrollbar {
       -moz-appearance: none !important;
       background: silver !important;
     }
 
-    /* line 200, styles.scss */
+    /* line 223, styles.scss */
     thumb, scrollbarbutton {
       -moz-appearance: none !important;
       background-color: #62cab4 !important;
     }
 
-    /* line 205, styles.scss */
+    /* line 228, styles.scss */
     thumb:hover, scrollbarbutton:hover {
       -moz-appearance: none !important;
       background-color: #40b89f !important;
     }
 
-    /* line 210, styles.scss */
+    /* line 233, styles.scss */
     scrollbarbutton {
       display: none !important;
     }
 
-    /* line 214, styles.scss */
+    /* line 237, styles.scss */
     scrollbar[orient="vertical"] {
       min-width: 5px !important;
     }

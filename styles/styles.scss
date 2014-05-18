@@ -91,8 +91,18 @@ form {
   &> li {
     padding: 1em;
     border-top: 1px solid $lightTeal;
+    height: 150px;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     &:hover {
-      cursor: pointer;
+      .details {
+        margin-top: -128px;
+      }
     }
     &.Clear {
       background: url(../images/sun_background.png);
@@ -110,7 +120,6 @@ form {
   font-size: 16px;
   text-transform: uppercase;
   line-height: 3em;
-  margin-bottom: 1em;
   @include border-radius(25px);
 }
 .blurb {
@@ -129,38 +138,52 @@ form {
     line-height: 2em;
   }
 }
-
+.details {
+  padding: 1em 1em 2em;
+  width: 200px;
+  margin: 0 auto;
+  @include border-radius(25px 25px 0 0);
+  position: relative;
+  z-index: 1;
+  background: $lighterTeal;
+  @include transition(margin 0.4s);
+}
 
 
 @include breakpoint($break-L) {
   .list-outer {
     width: ((200 + 40 + 1) * 7) + px;
     margin: 0 auto;
+    height: 199px;
+    overflow: hidden;
     border-left: 1px solid $lightTeal;
     border-right: 1px solid $lightTeal;
     &> li {
       width: 200px;
+      height: auto;
       float: left;
       display: block;
       border-bottom: 1px solid $lightTeal;
       border-left: 1px solid $lightTeal;
+      
       &:first-child {
         border-left: 0;
-      }
-      &.selected {
-        .date {
-          background: $lightTeal;
-        }
       }
     }
     
   }
+
   .extra-details {
     display: block;
+  }
+  .details {
+    width: auto;
   }
   .forecast-wrapper {
     width: 100%;
     overflow-x: auto;
+    overflow-y: hidden;
+    height: 199px;
     &::-webkit-scrollbar {
         width: 2.5px;
         height: 8px;

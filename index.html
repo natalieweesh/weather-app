@@ -28,8 +28,12 @@
     </div>
     <p ng-if="loading">Loading...</p>
 
-    <h2 ng-if="error && !loading">An error has occured!</h2>
-    <div ng-if="!error && !loading">
+    <h2 ng-if="error && !loading">
+      An error has occured!
+      <p ng-repeat="errorMessage in errorMessages">{{errorMessage}}</p>
+
+    </h2>
+    <div ng-if="days.length != 0 && !error && !loading">
       <h2 ng-model="cityName">{{cityName}}</h2>
       <div class="forecast-wrapper">
 
@@ -47,25 +51,23 @@
               </li>
               <li class="blurb">{{day.blurb}}</li>
             </ul>
+            <ul class="details">
+              <li>
+                Cloud cover: {{day.clouds}}
+              </li>
+              <li>
+                Humidity: {{day.humidity}}
+              </li>
+              <li>
+                Pressure: {{day.pressure}}
+              </li>
+              <li>
+                Speed: {{day.speed}}
+              </li>
+            </ul>
           </li>
         </ul>
       </div> <!-- end div .forecast-wrapper -->
-      <div ng-if="selectedDay" class="extra-details" ng-model="selectedDay">
-        <ul>
-          <li>
-            Cloud cover: {{selectedDay.clouds}}
-          </li>
-          <li>
-            Humidity: {{selectedDay.humidity}}
-          </li>
-          <li>
-            Pressure: {{selectedDay.pressure}}
-          </li>
-          <li>
-            Speed: {{selectedDay.speed}}
-          </li>
-        </ul>
-      </div>
     </div>
     
 

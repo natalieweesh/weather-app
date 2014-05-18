@@ -17,14 +17,24 @@ angular.module('weatherApp', [])
   
   $scope.loading = false;
   $scope.error = false;
+  $scope.errorMessages = [];
   $scope.days = [];
 
-  
-  $scope.selectDay = function(idx){
-    $scope.selectedDay = $scope.days[idx];
-    console.log('selected day idx is ' + $scope.selectedDay.idx);
+  $scope.checkErrors = function(city, state) {
+    if (!city || city.trim() === "") {
+      $scope.errorMessages.push("Please enter a valid city");
+    }
+    if (!state || state.trim().length != 2) {
+      $scope.errorMessages.push("Please enter a valid state");
+    }
+    if ($scope.errorMessages.length > 0) {
+      return true;
+    } else {
+      return false;
+    }
+
   }
-  
+
   $scope.getDays = function(data) {
     $scope.days = [];
     $scope.today = new Date();
@@ -47,27 +57,33 @@ angular.module('weatherApp', [])
                       });
       nextDay = new Date(nextDay.setDate($scope.today.getDate() + i * 1));
     }
-    $scope.selectedDay = $scope.days[0]; 
   }
 
   $scope.getWeather = function(city, state) {
     
     $scope.loading = true;
     $scope.error = false;
+    $scope.errorMessages = [];
+    
+    if (!$scope.checkErrors(city, state)) {
 
-    weatherApi.getData(city, state).success(function(response) {
+      weatherApi.getData(city, state).success(function(response) {
+        $scope.loading = false;
+        $scope.result = response;
+        $scope.statusCode = response.cod;
+        console.log(response);
+        if ($scope.statusCode !== "200") {
+          $scope.error = true;
+        } else {
+          $scope.getDays(response);
+        }
+
+      });
+
+    } else {
+      $scope.error = true;
       $scope.loading = false;
-      $scope.result = response;
-      $scope.statusCode = response.cod;
-      console.log(response);
-      if ($scope.statusCode !== "200") {
-        $scope.error = true;
-      } else {
-        $scope.getDays(response);
-      }
-
-    });
-
+    }
   }
 
 });

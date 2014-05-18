@@ -94,11 +94,27 @@ form {
     &:hover {
       cursor: pointer;
     }
+    &.Clear {
+      background: url(../images/sun_background.png);
+    }
+    &.Clouds {
+      background: url(../images/clouds_background.png);
+    }
+    &.Rain {
+      background: url(../images/rain_background.png);
+    }
+    
   }
 }
 .date {
   font-size: 16px;
   text-transform: uppercase;
+  line-height: 3em;
+  margin-bottom: 1em;
+  @include border-radius(25px);
+}
+.blurb {
+  margin: 1em auto;
 }
 .big {
   font-size: 30px;
@@ -131,6 +147,11 @@ form {
       &:first-child {
         border-left: 0;
       }
+      &.selected {
+        .date {
+          background: $teal;
+        }
+      }
     }
     
   }
@@ -141,10 +162,12 @@ form {
     width: 100%;
     overflow-x: auto;
     &::-webkit-scrollbar {
-        width: 5px;
+        width: 2.5px;
+        height: 8px;
     }
     &::-moz-scrollbar {
-        width: 5px;
+        width: 2.5px;
+        height: 8px;
     }
      
     &::-webkit-scrollbar-track {
@@ -157,11 +180,11 @@ form {
     }
      
     &::-webkit-scrollbar-thumb {
-        border-radius: 5px;
+        border-radius: 10px;
         background: $lightTeal;
     }
     &::-moz-scrollbar-thumb {
-        border-radius: 5px;
+        border-radius: 10px;
         background: $lightTeal;
     }
   }

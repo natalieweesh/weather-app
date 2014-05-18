@@ -34,7 +34,7 @@
       <div class="forecast-wrapper">
 
         <ul class="list-outer clearfix">
-          <li ng-repeat="day in days" ng-click="selectDay(day.idx)">
+          <li ng-repeat="day in days" ng-click="selectDay(day.idx)" class="{{day.description}}" ng-class="{selected: day.idx == selectedDay.idx}">
             <ul>
               <li class="date">
                 {{day.theDate | date:'EEEE, MMM d'}}
@@ -45,7 +45,7 @@
               <li>
                 Lo: <span class="big">{{day.lo}}&deg;</span> F
               </li>
-              <li>{{day.blurb}}</li>
+              <li class="blurb">{{day.blurb}}</li>
             </ul>
           </li>
         </ul>

@@ -22,6 +22,7 @@ angular.module('weatherApp', [])
   
   $scope.selectDay = function(idx){
     $scope.selectedDay = $scope.days[idx];
+    console.log('selected day idx is ' + $scope.selectedDay.idx);
   }
   
   $scope.getDays = function(data) {
@@ -41,7 +42,8 @@ angular.module('weatherApp', [])
                         'clouds': dayData.clouds,
                         'humidity': dayData.humidity,
                         'pressure': dayData.pressure,
-                        'speed': dayData.speed
+                        'speed': dayData.speed,
+                        'description': dayData.weather[0].main
                       });
       nextDay = new Date(nextDay.setDate($scope.today.getDate() + i * 1));
     }

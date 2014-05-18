@@ -104,42 +104,66 @@ form {
 .list-outer > li:hover {
   cursor: pointer;
 }
+/* line 97, styles.scss */
+.list-outer > li.Clear {
+  background: url(../images/sun_background.png);
+}
+/* line 100, styles.scss */
+.list-outer > li.Clouds {
+  background: url(../images/clouds_background.png);
+}
+/* line 103, styles.scss */
+.list-outer > li.Rain {
+  background: url(../images/rain_background.png);
+}
 
-/* line 99, styles.scss */
+/* line 109, styles.scss */
 .date {
   font-size: 16px;
   text-transform: uppercase;
+  line-height: 3em;
+  margin-bottom: 1em;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px;
 }
 
-/* line 103, styles.scss */
+/* line 116, styles.scss */
+.blurb {
+  margin: 1em auto;
+}
+
+/* line 119, styles.scss */
 .big {
   font-size: 30px;
 }
 
-/* line 106, styles.scss */
+/* line 122, styles.scss */
 .list-inner > li {
   line-height: 2em;
 }
 
-/* line 109, styles.scss */
+/* line 125, styles.scss */
 .extra-details {
   display: none;
   padding: 1em;
 }
-/* line 112, styles.scss */
+/* line 128, styles.scss */
 .extra-details ul > li {
   line-height: 2em;
 }
 
 @media screen and (min-width: 895px) {
-  /* line 120, styles.scss */
+  /* line 136, styles.scss */
   .list-outer {
     width: 1687px;
     margin: 0 auto;
     border-left: 1px solid #62cab4;
     border-right: 1px solid #62cab4;
   }
-  /* line 125, styles.scss */
+  /* line 141, styles.scss */
   .list-outer > li {
     width: 200px;
     float: left;
@@ -147,75 +171,81 @@ form {
     border-bottom: 1px solid #62cab4;
     border-left: 1px solid #62cab4;
   }
-  /* line 131, styles.scss */
+  /* line 147, styles.scss */
   .list-outer > li:first-child {
     border-left: 0;
   }
+  /* line 151, styles.scss */
+  .list-outer > li.selected .date {
+    background: #40b89f;
+  }
 
-  /* line 137, styles.scss */
+  /* line 158, styles.scss */
   .extra-details {
     display: block;
   }
 
-  /* line 140, styles.scss */
+  /* line 161, styles.scss */
   .forecast-wrapper {
     width: 100%;
     overflow-x: auto;
   }
-  /* line 143, styles.scss */
+  /* line 164, styles.scss */
   .forecast-wrapper::-webkit-scrollbar {
-    width: 5px;
+    width: 2.5px;
+    height: 8px;
   }
-  /* line 146, styles.scss */
+  /* line 168, styles.scss */
   .forecast-wrapper::-moz-scrollbar {
-    width: 5px;
+    width: 2.5px;
+    height: 8px;
   }
-  /* line 150, styles.scss */
+  /* line 173, styles.scss */
   .forecast-wrapper::-webkit-scrollbar-track {
     border-radius: 0px;
     background: silver;
   }
-  /* line 154, styles.scss */
+  /* line 177, styles.scss */
   .forecast-wrapper::-moz-scrollbar-track {
     border-radius: 0px;
     background: silver;
   }
-  /* line 159, styles.scss */
+  /* line 182, styles.scss */
   .forecast-wrapper::-webkit-scrollbar-thumb {
-    border-radius: 5px;
+    border-radius: 10px;
     background: #62cab4;
   }
-  /* line 163, styles.scss */
+  /* line 186, styles.scss */
   .forecast-wrapper::-moz-scrollbar-thumb {
-    border-radius: 5px;
+    border-radius: 10px;
     background: #62cab4;
   }
 
   @-moz-document url-prefix(http://),url-prefix(https://) {
-    /* line 173, styles.scss */
+    /* line 196, styles.scss */
     scrollbar {
       -moz-appearance: none !important;
       background: silver !important;
     }
 
-    /* line 177, styles.scss */
+    /* line 200, styles.scss */
     thumb, scrollbarbutton {
       -moz-appearance: none !important;
       background-color: #62cab4 !important;
     }
 
-    /* line 182, styles.scss */
+    /* line 205, styles.scss */
     thumb:hover, scrollbarbutton:hover {
       -moz-appearance: none !important;
       background-color: #40b89f !important;
     }
 
-    /* line 187, styles.scss */
+    /* line 210, styles.scss */
     scrollbarbutton {
       display: none !important;
     }
 
-    /* line 191, styles.scss */
+    /* line 214, styles.scss */
     scrollbar[orient="vertical"] {
       min-width: 5px !important;
     }

@@ -97,6 +97,7 @@ form {
     overflow: hidden;
     background-size: 100px 100px;
     background-position: right top;
+    background-repeat: no-repeat;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -110,13 +111,13 @@ form {
       }
     }
     &.Clear {
-      background-image: url(../images/sun_icon.png);
+      background-image: url(../images/sun_icon_transparent.png);
     }
     &.Clouds {
-      background-image: url(../images/cloud_icon.png);
+      background-image: url(../images/cloud_icon_transparent.png);
     }
     &.Rain {
-      background-image: url(../images/rain_icon.png);
+      background-image: url(../images/rain_icon_transparent.png);
       background-size: 65px 65px;
       background-position: right 10px;
     }

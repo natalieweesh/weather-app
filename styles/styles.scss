@@ -90,6 +90,7 @@ form {
 .list-outer {
   &> li {
     padding: 1em;
+    line-height: 1em;
     border-top: 1px solid $lightTeal;
     height: 150px;
     overflow: hidden;
@@ -132,7 +133,7 @@ form {
   font-size: 30px;
 }
 .list-inner > li {
-  //line-height: 2em;
+  //line-height: 1em;
 }
 .extra-details {
   display: none;

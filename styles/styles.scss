@@ -93,6 +93,7 @@ form {
     line-height: 1em;
     border-top: 1px solid $lightTeal;
     height: 150px;
+    position: relative;
     overflow: hidden;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -105,14 +106,30 @@ form {
         margin-top: -128px;
       }
     }
+    &:after {
+      width: 100px;
+      height: 100px;
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @include background-size(contain);
+    }
     &.Clear {
-      background: url(../images/sun_icon.png);
+      &:after {
+        background: url(../images/sun_icon.png);
+      }
     }
     &.Clouds {
-      background: url(../images/cloud_icon.png);
+      &:after {
+        background: url(../images/cloud_icon.png);
+      }
     }
     &.Rain {
-      background: url(../images/rain_icon.png);
+      &:after {
+        background: url(../images/rain_icon.png);
+      }
     }
     
   }

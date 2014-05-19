@@ -95,6 +95,8 @@ form {
     height: 150px;
     position: relative;
     overflow: hidden;
+    background-size: 100px 100px;
+    background-position: right top;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -107,38 +109,16 @@ form {
         background: $lighterTeal;
       }
     }
-    &:after {
-      width: 100px;
-      height: 100px;
-      display: block;
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      filter: alpha(opacity=20);
-      opacity: 0.2;
-      
-    }
     &.Clear {
-      &:after {
-        background: url(../images/sun_icon.png);
-        @include background-size(contain);
-      }
+      background-image: url(../images/sun_icon.png);
     }
     &.Clouds {
-      &:after {
-        background: url(../images/cloud_icon.png);
-        @include background-size(contain);
-      }
+      background-image: url(../images/cloud_icon.png);
     }
     &.Rain {
-      &:after {
-        background: url(../images/rain_icon.png);
-        @include background-size(contain);
-        width: 65px;
-        height: 65px;
-        top: 10px;
-      }
+      background-image: url(../images/rain_icon.png);
+      background-size: 65px 65px;
+      background-position: right 10px;
     }
     
   }

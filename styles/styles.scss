@@ -112,23 +112,26 @@ form {
       display: block;
       content: "";
       position: absolute;
-      bottom: 0;
+      top: 0;
       right: 0;
-      @include background-size(contain);
+      
     }
     &.Clear {
       &:after {
         background: url(../images/sun_icon.png);
+        @include background-size(contain);
       }
     }
     &.Clouds {
       &:after {
         background: url(../images/cloud_icon.png);
+        @include background-size(contain);
       }
     }
     &.Rain {
       &:after {
         background: url(../images/rain_icon.png);
+        @include background-size(contain);
       }
     }
     

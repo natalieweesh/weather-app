@@ -79,7 +79,7 @@
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  border: 7px solid #2a2a2a;
+  border: 7px solid #cecece;
   -webkit-animation: convect 4s infinite linear;
   animation: convect 4s infinite linear;
 }

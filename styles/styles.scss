@@ -88,6 +88,7 @@ form {
   text-align: center;
 }
 .list-outer {
+  border-bottom: 1px solid $lightTeal;
   &> li {
     padding: 1em;
     line-height: 1em;
@@ -156,6 +157,13 @@ form {
   background: #fff;
   @include transition(margin 0.4s, background 0.4s);
 }
+#attribution {
+  font-size: 11px;
+  color: $lightGray;
+  a {
+    color: $lightGray;
+  }
+}
 
 
 @include breakpoint($break-L) {
@@ -221,7 +229,10 @@ form {
         background: $lightTeal;
     }
   }
-
+  #attribution {
+    position: absolute;
+    bottom: 0;
+  }
 
 
 

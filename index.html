@@ -28,11 +28,10 @@
     </div>
     <p ng-if="loading">Loading...</p>
 
-    <h2 ng-if="error && !loading">
-      An error has occured!
+    <h3 ng-if="error && !loading">
       <p ng-repeat="errorMessage in errorMessages">{{errorMessage}}</p>
 
-    </h2>
+    </h3>
     <div ng-if="days.length != 0 && !error && !loading">
       <h2 ng-model="cityName">{{cityName}}</h2>
       <div class="forecast-wrapper">
@@ -71,11 +70,5 @@
       <small id="attribution">icons courtesy of <a href="http://thenounproject.com">The Noun Project</a></small>
     </div>
     
-
-    <script>
-      $(document).ready(function(){
-        
-      });
-    </script>
   </body>
 </html>

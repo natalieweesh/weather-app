@@ -74,6 +74,7 @@ angular.module('weatherApp', [])
         console.log(response);
         if ($scope.statusCode !== "200") {
           $scope.error = true;
+          $scope.errorMessages.push("Uh oh! Something went wrong");
         } else {
           $scope.getDays(response);
         }

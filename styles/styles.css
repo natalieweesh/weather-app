@@ -1,58 +1,281 @@
-/*
-Syntax error: Invalid CSS after "}": expected "}", was ""
-        on line 246 of C:/Users/Natalie/Documents/GitHub/weather-app/styles/styles.scss
+/* line 19, styles.scss */
+.clearfix:after {
+  display: table;
+  content: "";
+  clear: both;
+}
 
-Backtrace:
-C:/Users/Natalie/Documents/GitHub/weather-app/styles/styles.scss:246
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:1129:in `expected'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:1066:in `expected'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:1061:in `tok!'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:519:in `block'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:512:in `ruleset'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:536:in `block_child'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:529:in `block_contents'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:70:in `stylesheet'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:27:in `parse'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/engine.rb:342:in `_to_tree'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/engine.rb:315:in `_render'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/engine.rb:262:in `render'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `compile'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `compile'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
-org/jruby/RubyArray.java:1603:in `each'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
-org/jruby/RubyMethod.java:133:in `call'
-org/jruby/RubyProc.java:268:in `call'
-org/jruby/RubyProc.java:228:in `call'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `run_callback'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/path.rb:55:in `callback_action'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/path.rb:35:in `update'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/state/directory.rb:39:in `modified'
-org/jruby/RubyArray.java:1603:in `each'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `modified'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/state/directory.rb:18:in `refresh'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `run'
-org/jruby/RubyArray.java:1603:in `each'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `run'
-org/jruby/RubyKernel.java:1419:in `loop'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `run'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/monitor.rb:26:in `run'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm.rb:70:in `monitor'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-C:\Program Files (x86)\Scout\bin\compass:12:in `(root)'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 246 of C:/Users/Natalie/Documents/GitHub/weather-app/styles/styles.scss"; }
+/* line 24, styles.scss */
+body {
+  text-align: center;
+}
+
+/* line 27, styles.scss */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 32, styles.scss */
+body, input[type=text], input[type=submit] {
+  font-family: 'Josefin Sans', verdana, sans-serif;
+  font-size: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 40, styles.scss */
+input[type=submit], input[type=text] {
+  padding: 1em;
+  margin: 0.5em;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+/* line 44, styles.scss */
+input[type=submit]:focus, input[type=text]:focus {
+  outline: 0;
+}
+
+/* line 48, styles.scss */
+input[type=text] {
+  border: 1px solid #62cab4;
+}
+
+/* line 51, styles.scss */
+input[type=text].state {
+  width: 60px;
+  text-transform: uppercase;
+}
+/* line 54, styles.scss */
+input[type=text].state::-webkit-input-placeholder {
+  text-transform: none;
+}
+/* line 57, styles.scss */
+input[type=text].state:-moz-placeholder {
+  text-transform: none;
+}
+/* line 60, styles.scss */
+input[type=text].state::-moz-placeholder {
+  text-transform: none;
+}
+/* line 63, styles.scss */
+input[type=text].state:-ms-input-placeholder {
+  text-transform: none;
+}
+
+/* line 67, styles.scss */
+input[type=submit] {
+  background: #87d7c7;
+  position: relative;
+  top: -3px;
+  left: -3px;
+  -webkit-box-shadow: 1px 0px 0px #62cab4, 0px 1px 0px #40b89f, 2px 1px 0px #62cab4, 1px 2px 0px #40b89f, 3px 2px 0px #62cab4, 2px 3px 0px #40b89f, 4px 3px 0px #62cab4, 3px 4px 0px #40b89f;
+  -moz-box-shadow: 1px 0px 0px #62cab4, 0px 1px 0px #40b89f, 2px 1px 0px #62cab4, 1px 2px 0px #40b89f, 3px 2px 0px #62cab4, 2px 3px 0px #40b89f, 4px 3px 0px #62cab4, 3px 4px 0px #40b89f;
+  box-shadow: 1px 0px 0px #62cab4, 0px 1px 0px #40b89f, 2px 1px 0px #62cab4, 1px 2px 0px #40b89f, 3px 2px 0px #62cab4, 2px 3px 0px #40b89f, 4px 3px 0px #62cab4, 3px 4px 0px #40b89f;
+}
+/* line 81, styles.scss */
+input[type=submit]:hover {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  top: 0;
+  left: 0;
+}
+
+/* line 87, styles.scss */
+form {
+  text-align: center;
+}
+
+/* line 91, styles.scss */
+.list-outer > li {
+  padding: 1em;
+  line-height: 1em;
+  border-top: 1px solid #62cab4;
+  height: 150px;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 104, styles.scss */
+.list-outer > li:hover .details {
+  margin-top: -128px;
+}
+/* line 108, styles.scss */
+.list-outer > li.Clear {
+  background: url(../images/sun_icon.png);
+}
+/* line 111, styles.scss */
+.list-outer > li.Clouds {
+  background: url(../images/cloud_icon.png);
+}
+/* line 114, styles.scss */
+.list-outer > li.Rain {
+  background: url(../images/rain_icon.png);
+}
+
+/* line 120, styles.scss */
+.date {
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 3em;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px;
+}
+
+/* line 126, styles.scss */
+.blurb {
+  margin: 1em auto;
+}
+
+/* line 129, styles.scss */
+.big {
+  font-size: 30px;
+}
+
+/* line 135, styles.scss */
+.extra-details {
+  display: none;
+  padding: 1em;
+}
+/* line 138, styles.scss */
+.extra-details ul > li {
+  line-height: 2em;
+}
+
+/* line 142, styles.scss */
+.details {
+  padding: 1em 1em 2em;
+  width: 200px;
+  margin: 0 auto;
+  -webkit-border-radius: 25px 25px 0 0;
+  -moz-border-radius: 25px 25px 0 0;
+  -ms-border-radius: 25px 25px 0 0;
+  -o-border-radius: 25px 25px 0 0;
+  border-radius: 25px 25px 0 0;
+  position: relative;
+  z-index: 1;
+  background: #87d7c7;
+  -webkit-transition: margin 0.4s;
+  -moz-transition: margin 0.4s;
+  -o-transition: margin 0.4s;
+  transition: margin 0.4s;
+}
+
+@media screen and (min-width: 895px) {
+  /* line 155, styles.scss */
+  .list-outer {
+    width: 1687px;
+    margin: 0 auto;
+    height: 199px;
+    overflow: hidden;
+    border-left: 1px solid #62cab4;
+    border-right: 1px solid #62cab4;
+  }
+  /* line 162, styles.scss */
+  .list-outer > li {
+    width: 200px;
+    height: auto;
+    float: left;
+    display: block;
+    border-bottom: 1px solid #62cab4;
+    border-left: 1px solid #62cab4;
+  }
+  /* line 170, styles.scss */
+  .list-outer > li:first-child {
+    border-left: 0;
+  }
+
+  /* line 177, styles.scss */
+  .extra-details {
+    display: block;
+  }
+
+  /* line 180, styles.scss */
+  .details {
+    width: auto;
+  }
+
+  /* line 183, styles.scss */
+  .forecast-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 199px;
+  }
+  /* line 188, styles.scss */
+  .forecast-wrapper::-webkit-scrollbar {
+    width: 2.5px;
+    height: 8px;
+  }
+  /* line 192, styles.scss */
+  .forecast-wrapper::-moz-scrollbar {
+    width: 2.5px;
+    height: 8px;
+  }
+  /* line 197, styles.scss */
+  .forecast-wrapper::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background: silver;
+  }
+  /* line 201, styles.scss */
+  .forecast-wrapper::-moz-scrollbar-track {
+    border-radius: 0px;
+    background: silver;
+  }
+  /* line 206, styles.scss */
+  .forecast-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #62cab4;
+  }
+  /* line 210, styles.scss */
+  .forecast-wrapper::-moz-scrollbar-thumb {
+    border-radius: 10px;
+    background: #62cab4;
+  }
+
+  @-moz-document url-prefix(http://),url-prefix(https://) {
+    /* line 220, styles.scss */
+    scrollbar {
+      -moz-appearance: none !important;
+      background: silver !important;
+    }
+
+    /* line 224, styles.scss */
+    thumb, scrollbarbutton {
+      -moz-appearance: none !important;
+      background-color: #62cab4 !important;
+    }
+
+    /* line 229, styles.scss */
+    thumb:hover, scrollbarbutton:hover {
+      -moz-appearance: none !important;
+      background-color: #40b89f !important;
+    }
+
+    /* line 234, styles.scss */
+    scrollbarbutton {
+      display: none !important;
+    }
+
+    /* line 238, styles.scss */
+    scrollbar[orient="vertical"] {
+      min-width: 5px !important;
+    }
+}
+}

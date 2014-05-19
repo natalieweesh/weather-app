@@ -173,6 +173,11 @@ form {
   font-size: 30px;
 }
 
+/* line 154, styles.scss */
+.details > li {
+  line-height: 3em;
+}
+
 /* line 157, styles.scss */
 .extra-details {
   display: none;

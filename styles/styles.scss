@@ -183,6 +183,7 @@ form {
     border-left: 1px solid $lightTeal;
     border-right: 1px solid $lightTeal;
     border-bottom: 1px solid $lightTeal;
+    @include box-sizing(border-box);
     &> li {
       width: 200px;
       height: auto;

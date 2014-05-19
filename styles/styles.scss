@@ -176,12 +176,13 @@ form {
 
 @include breakpoint($break-L) {
   .list-outer {
-    width: ((200 + 40 + 1) * 7) + px;
+    width: ((200 + 40 + 1) * 7) + 1 + px;
     margin: 0 auto;
     height: 199px;
     overflow: hidden;
     border-left: 1px solid $lightTeal;
     border-right: 1px solid $lightTeal;
+    border-bottom: 1px solid $lightTeal;
     &> li {
       width: 200px;
       height: auto;

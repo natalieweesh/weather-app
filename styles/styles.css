@@ -218,8 +218,11 @@ form {
     border-left: 1px solid #62cab4;
     border-right: 1px solid #62cab4;
     border-bottom: 1px solid #62cab4;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
-  /* line 186, styles.scss */
+  /* line 187, styles.scss */
   .list-outer > li {
     width: 200px;
     height: auto;
@@ -228,84 +231,84 @@ form {
     border-bottom: 1px solid #62cab4;
     border-left: 1px solid #62cab4;
   }
-  /* line 194, styles.scss */
+  /* line 195, styles.scss */
   .list-outer > li:first-child {
     border-left: 0;
   }
 
-  /* line 201, styles.scss */
+  /* line 202, styles.scss */
   .extra-details {
     display: block;
   }
 
-  /* line 204, styles.scss */
+  /* line 205, styles.scss */
   .details {
     width: auto;
   }
 
-  /* line 207, styles.scss */
+  /* line 208, styles.scss */
   .forecast-wrapper {
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     height: 199px;
   }
-  /* line 212, styles.scss */
+  /* line 213, styles.scss */
   .forecast-wrapper::-webkit-scrollbar {
     width: 2.5px;
     height: 8px;
   }
-  /* line 216, styles.scss */
+  /* line 217, styles.scss */
   .forecast-wrapper::-moz-scrollbar {
     width: 2.5px;
     height: 8px;
   }
-  /* line 221, styles.scss */
+  /* line 222, styles.scss */
   .forecast-wrapper::-webkit-scrollbar-track {
     border-radius: 0px;
     background: silver;
   }
-  /* line 225, styles.scss */
+  /* line 226, styles.scss */
   .forecast-wrapper::-moz-scrollbar-track {
     border-radius: 0px;
     background: silver;
   }
-  /* line 230, styles.scss */
+  /* line 231, styles.scss */
   .forecast-wrapper::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: #62cab4;
   }
-  /* line 234, styles.scss */
+  /* line 235, styles.scss */
   .forecast-wrapper::-moz-scrollbar-thumb {
     border-radius: 10px;
     background: #62cab4;
   }
 
   @-moz-document url-prefix(http://),url-prefix(https://) {
-    /* line 244, styles.scss */
+    /* line 245, styles.scss */
     scrollbar {
       -moz-appearance: none !important;
       background: silver !important;
     }
 
-    /* line 248, styles.scss */
+    /* line 249, styles.scss */
     thumb, scrollbarbutton {
       -moz-appearance: none !important;
       background-color: #62cab4 !important;
     }
 
-    /* line 253, styles.scss */
+    /* line 254, styles.scss */
     thumb:hover, scrollbarbutton:hover {
       -moz-appearance: none !important;
       background-color: #40b89f !important;
     }
 
-    /* line 258, styles.scss */
+    /* line 259, styles.scss */
     scrollbarbutton {
       display: none !important;
     }
 
-    /* line 262, styles.scss */
+    /* line 263, styles.scss */
     scrollbar[orient="vertical"] {
       min-width: 5px !important;
     }

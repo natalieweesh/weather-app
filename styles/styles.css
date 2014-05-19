@@ -100,6 +100,7 @@ form {
   padding: 1em;
   border-top: 1px solid #62cab4;
   height: 150px;
+  line-height: 1em;
   overflow: hidden;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -153,7 +154,7 @@ form {
 
 /* line 131, styles.scss */
 .list-inner > li {
-  //line-height: 2em;
+  /*line-height: 2em;*/
 }
 
 /* line 134, styles.scss */

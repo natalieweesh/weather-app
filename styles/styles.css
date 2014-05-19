@@ -115,10 +115,10 @@ form {
 /* line 107, styles.scss */
 .list-outer > li.Clear {
   background: url(../images/sun_background.png);
-  background: -webkit-linear-gradient(#f9f085, #fccc32, #f9f085); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#f9f085, #fccc32, #f9f085); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#f9f085, #fccc32, #f9f085); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#f9f085, #fccc32, #f9f085);
+  background: -webkit-linear-gradient(left, #f9f085, #fccc32, #f9f085); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, #f9f085, #fccc32, #f9f085); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, #f9f085, #fccc32, #f9f085); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(left, #f9f085, #fccc32, #f9f085);
 }
 /* line 110, styles.scss */
 .list-outer > li.Clouds {

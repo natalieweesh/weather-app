@@ -114,6 +114,8 @@ form {
       position: absolute;
       top: 0;
       right: 0;
+      filter: alpha(opacity=20);
+      opacity: 0.2;
       
     }
     &.Clear {

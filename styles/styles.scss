@@ -135,6 +135,9 @@ form {
       &:after {
         background: url(../images/rain_icon.png);
         @include background-size(contain);
+        width: 65px;
+        height: 65px;
+        top: 10px;
       }
     }
     

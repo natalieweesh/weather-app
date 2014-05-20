@@ -21,10 +21,14 @@ angular.module('weatherApp', [])
   $scope.days = [];
 
   $scope.checkErrors = function(city, state) {
-    if (!city || city.trim() === "") {
+    var regex = /[\!\@\#\$\%\^\&\*\(\)\+\=\d\~\`\_]/;
+    var illegalChars = [];
+    illegalChars = city.match(regex);
+    if (!city || city.trim() === "" || (illegalChars && illegalChars.length > 0)) {
       $scope.errorMessages.push("Please enter a valid city");
     }
-    if (!state || state.trim().length != 2) {
+    illegalChars = state.match(regex);
+    if (!state || state.trim().length != 2 || (illegalChars && illegalChars.length > 0)) {
       $scope.errorMessages.push("Please enter a valid state");
     }
     if ($scope.errorMessages.length > 0) {
@@ -74,6 +78,7 @@ angular.module('weatherApp', [])
         console.log(response);
         if ($scope.statusCode !== "200") {
           $scope.error = true;
+          $scope.errorMessages.push("Uh oh! Something went wrong");
         } else {
           $scope.getDays(response);
         }

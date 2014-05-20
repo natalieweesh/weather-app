@@ -88,11 +88,17 @@ form {
   text-align: center;
 }
 .list-outer {
+  border-bottom: 1px solid $lightTeal;
   &> li {
     padding: 1em;
+    line-height: 1em;
     border-top: 1px solid $lightTeal;
     height: 150px;
+    position: relative;
     overflow: hidden;
+    background-size: 100px 100px;
+    background-position: right top;
+    background-repeat: no-repeat;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -101,17 +107,20 @@ form {
     user-select: none;
     &:hover {
       .details {
-        margin-top: -128px;
+        margin-top: -118px;
+        background: $lighterTeal;
       }
     }
     &.Clear {
-      background: url(../images/sun_background.png);
+      background-image: url(../images/sun_icon_transparent.png);
     }
     &.Clouds {
-      background: url(../images/clouds_background.png);
+      background-image: url(../images/cloud_icon_transparent.png);
     }
     &.Rain {
-      background: url(../images/rain_background.png);
+      background-image: url(../images/rain_icon_transparent.png);
+      background-size: 65px 65px;
+      background-position: right 10px;
     }
     
   }
@@ -128,8 +137,8 @@ form {
 .big {
   font-size: 30px;
 }
-.list-inner > li {
-  line-height: 2em;
+.details > li {
+  line-height: 1.3em;
 }
 .extra-details {
   display: none;
@@ -144,20 +153,28 @@ form {
   margin: 0 auto;
   @include border-radius(25px 25px 0 0);
   position: relative;
-  z-index: 1;
-  background: $lighterTeal;
-  @include transition(margin 0.4s);
+  background: #fff;
+  @include transition(margin 0.4s, background 0.4s);
+}
+#attribution {
+  font-size: 13px;
+  color: $lightGray;
+  a {
+    color: $lightGray;
+  }
 }
 
 
 @include breakpoint($break-L) {
   .list-outer {
-    width: ((200 + 40 + 1) * 7) + px;
+    width: ((200 + 40 + 1) * 7) + 1 + px;
     margin: 0 auto;
-    height: 199px;
+    height: 198px;
     overflow: hidden;
     border-left: 1px solid $lightTeal;
     border-right: 1px solid $lightTeal;
+    border-bottom: 1px solid $lightTeal;
+    @include box-sizing(border-box);
     &> li {
       width: 200px;
       height: auto;
@@ -211,7 +228,10 @@ form {
         background: $lightTeal;
     }
   }
-
+  #attribution {
+    position: absolute;
+    bottom: 0;
+  }
 
 
 

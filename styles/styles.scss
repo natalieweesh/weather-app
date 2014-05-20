@@ -107,7 +107,7 @@ form {
     user-select: none;
     &:hover {
       .details {
-        margin-top: -128px;
+        margin-top: -118px;
         background: $lighterTeal;
       }
     }
@@ -153,7 +153,6 @@ form {
   margin: 0 auto;
   @include border-radius(25px 25px 0 0);
   position: relative;
-  z-index: 1;
   background: #fff;
   @include transition(margin 0.4s, background 0.4s);
 }
@@ -170,7 +169,7 @@ form {
   .list-outer {
     width: ((200 + 40 + 1) * 7) + 1 + px;
     margin: 0 auto;
-    height: 199px;
+    height: 198px;
     overflow: hidden;
     border-left: 1px solid $lightTeal;
     border-right: 1px solid $lightTeal;

@@ -119,7 +119,7 @@ form {
 }
 /* line 109, styles.scss */
 .list-outer > li:hover .details {
-  margin-top: -128px;
+  margin-top: -118px;
   background: #87d7c7;
 }
 /* line 114, styles.scss */
@@ -185,7 +185,6 @@ form {
   -o-border-radius: 25px 25px 0 0;
   border-radius: 25px 25px 0 0;
   position: relative;
-  z-index: 1;
   background: #fff;
   -webkit-transition: margin 0.4s, background 0.4s;
   -moz-transition: margin 0.4s, background 0.4s;
@@ -193,22 +192,22 @@ form {
   transition: margin 0.4s, background 0.4s;
 }
 
-/* line 160, styles.scss */
+/* line 159, styles.scss */
 #attribution {
   font-size: 13px;
   color: silver;
 }
-/* line 163, styles.scss */
+/* line 162, styles.scss */
 #attribution a {
   color: silver;
 }
 
 @media screen and (min-width: 895px) {
-  /* line 170, styles.scss */
+  /* line 169, styles.scss */
   .list-outer {
     width: 1688px;
     margin: 0 auto;
-    height: 199px;
+    height: 198px;
     overflow: hidden;
     border-left: 1px solid #62cab4;
     border-right: 1px solid #62cab4;
@@ -217,7 +216,7 @@ form {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 179, styles.scss */
+  /* line 178, styles.scss */
   .list-outer > li {
     width: 200px;
     height: auto;
@@ -226,90 +225,90 @@ form {
     border-bottom: 1px solid #62cab4;
     border-left: 1px solid #62cab4;
   }
-  /* line 187, styles.scss */
+  /* line 186, styles.scss */
   .list-outer > li:first-child {
     border-left: 0;
   }
 
-  /* line 194, styles.scss */
+  /* line 193, styles.scss */
   .extra-details {
     display: block;
   }
 
-  /* line 197, styles.scss */
+  /* line 196, styles.scss */
   .details {
     width: auto;
   }
 
-  /* line 200, styles.scss */
+  /* line 199, styles.scss */
   .forecast-wrapper {
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     height: 199px;
   }
-  /* line 205, styles.scss */
+  /* line 204, styles.scss */
   .forecast-wrapper::-webkit-scrollbar {
     width: 2.5px;
     height: 8px;
   }
-  /* line 209, styles.scss */
+  /* line 208, styles.scss */
   .forecast-wrapper::-moz-scrollbar {
     width: 2.5px;
     height: 8px;
   }
-  /* line 214, styles.scss */
+  /* line 213, styles.scss */
   .forecast-wrapper::-webkit-scrollbar-track {
     border-radius: 0px;
     background: silver;
   }
-  /* line 218, styles.scss */
+  /* line 217, styles.scss */
   .forecast-wrapper::-moz-scrollbar-track {
     border-radius: 0px;
     background: silver;
   }
-  /* line 223, styles.scss */
+  /* line 222, styles.scss */
   .forecast-wrapper::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: #62cab4;
   }
-  /* line 227, styles.scss */
+  /* line 226, styles.scss */
   .forecast-wrapper::-moz-scrollbar-thumb {
     border-radius: 10px;
     background: #62cab4;
   }
 
-  /* line 232, styles.scss */
+  /* line 231, styles.scss */
   #attribution {
     position: absolute;
     bottom: 0;
   }
 
   @-moz-document url-prefix(http://),url-prefix(https://) {
-    /* line 240, styles.scss */
+    /* line 239, styles.scss */
     scrollbar {
       -moz-appearance: none !important;
       background: silver !important;
     }
 
-    /* line 244, styles.scss */
+    /* line 243, styles.scss */
     thumb, scrollbarbutton {
       -moz-appearance: none !important;
       background-color: #62cab4 !important;
     }
 
-    /* line 249, styles.scss */
+    /* line 248, styles.scss */
     thumb:hover, scrollbarbutton:hover {
       -moz-appearance: none !important;
       background-color: #40b89f !important;
     }
 
-    /* line 254, styles.scss */
+    /* line 253, styles.scss */
     scrollbarbutton {
       display: none !important;
     }
 
-    /* line 258, styles.scss */
+    /* line 257, styles.scss */
     scrollbar[orient="vertical"] {
       min-width: 5px !important;
     }
